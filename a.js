@@ -1,9 +1,16 @@
 let s = document.createElement("style");
 s.textContent = `
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('//flff.pw/AmongUs-Regular.ttf') format('truetype');
+}
+
 html {
     background-image: url('//flff.pw/b.gif');
     background-size: 15% 150px;
     background-repeat: repeat-all;
+    font-family: 'MyCustomFont', sans-serif;
+    text-transform: uppercase;
 }`
 document.head.appendChild(s);
 
@@ -23,7 +30,6 @@ document.body.insertBefore(iframe, document.body.firstChild);
 
 let div = document.createElement('div');
 
-div.style.fontFamily = 'Comic Sans MS';
 div.style.color = 'yellow';
 div.style.backgroundColor = 'purple';
 div.style.border = '5px solid limegreen'; // Barf green color
