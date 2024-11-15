@@ -52,8 +52,8 @@ var new_element = old_element.cloneNode(true);
 old_element.parentNode.replaceChild(new_element, old_element);
 
 function embedWebpage() {
-  var url = "https://texnique.xyz";
-  var iframe2 = document.createElement('iframe');
+  let url = "https://texnique.xyz";
+  let iframe2 = document.createElement('iframe');
   iframe2.src = url;
   iframe2.width = "75%";
   iframe2.height = "500px";
