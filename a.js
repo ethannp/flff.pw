@@ -27,7 +27,7 @@ document.body.insertBefore(iframe, document.body.firstChild);
 
 
 
-
+/**
 let div = document.createElement('div');
 
 div.style.color = 'yellow';
@@ -42,7 +42,7 @@ fetch('https://flff.pw/candp.html')
     })
 
 document.body.appendChild(div);
-
+**/
 
 
 
