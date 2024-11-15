@@ -35,13 +35,15 @@ var new_element = old_element.cloneNode(true);
 old_element.parentNode.replaceChild(new_element, old_element);
 
 function embedWebpage() {
-  document.body.append(
+  document.body.insertBefore(
     Object.assign(document.createElement('iframe'), {
       src: "https://texnique.xyz",
       width: "75%",
       height: "500px",
       style: "border: 5px solid black;"
-    }));
+    }),
+    document.body.lastElementChild
+  );
 }
 
 new_element.addEventListener("click", embedWebpage);
