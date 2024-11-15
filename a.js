@@ -49,13 +49,15 @@ document.body.appendChild(div);
 
 
 function embedWebpage() {
-  var url = "https://texnique.xyz";
-  var iframe2 = document.createElement('iframe');
-  iframe2.src = url;
-  iframe2.width = "75%";
-  iframe2.height = "500px";
-  iframe2.style.border = "none";
-  document.body.insertBefore(iframe2, document.body.lastElementChild);
+  document.body.insertAfter(
+    Object.assign(document.createElement('iframe'), {
+      src: "https://texnique.xyz",
+      width: "75%",
+      height: "500px",
+      style: "border: 5px solid black;"
+    }),
+    document.body.lastElementChild
+  );
 }
 
 document.getElementById("play-again-button").removeEventListener("click", showIntro);
