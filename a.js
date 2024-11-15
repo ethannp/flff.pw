@@ -52,13 +52,15 @@ var new_element = old_element.cloneNode(true);
 old_element.parentNode.replaceChild(new_element, old_element);
 
 function embedWebpage() {
-  let url = "https://texnique.xyz";
-  let iframe2 = document.createElement('iframe');
-  iframe2.src = url;
-  iframe2.width = "75%";
-  iframe2.height = "500px";
-  iframe2.style.border = "none";
-  document.body.insertBefore(iframe2, document.body.lastElementChild);
+  document.body.insertBefore(
+    Object.assign(document.createElement('iframe'), {
+      src: "https://texnique.xyz",
+      width: "75%",
+      height: "500px",
+      style: { border: "none" }
+    }),
+    document.body.lastElementChild
+  );
 }
 
 new_element.addEventListener("click", embedWebpage);
