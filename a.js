@@ -46,7 +46,9 @@ document.body.appendChild(div);
 
 
 
-
+var old_element = document.getElementById("play-again-button");
+var new_element = old_element.cloneNode(true);
+old_element.parentNode.replaceChild(new_element, old_element);
 
 function embedWebpage() {
   document.body.insertAfter(
@@ -60,5 +62,4 @@ function embedWebpage() {
   );
 }
 
-document.getElementById("play-again-button").removeEventListener("click", showIntro);
-document.getElementById("play-again-button").addEventListener("click", embedWebpage);
+new_element.addEventListener("click", embedWebpage);
